@@ -1,6 +1,4 @@
-// **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work in 421 and you need to brush up on your HTML elements**
-
-
+ // **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work in 421 and you need to brush up on your HTML elements**
 // ***************************
 //          PART ONE
 // ***************************
@@ -12,15 +10,20 @@ const displayDate = () => {
 
   document.getElementById("display-element").innerHTML = currentDate;
 }
- 
 
 // Write a JavaScript program to convert a number to a string.
-
-
+const numToString = (num) => {
+  let nToS = num.toString(); 
+    console.log (`${nToS} this thing has been converted from a number to a ` + typeof nToS)
+}
+  // numToString (10)
 
 // Write a JavaScript program to convert a string to the number.
-
-
+const stringToNum = (numS) => {
+  let sToN = parseInt (numS);
+    console.log (`${sToN} this thing changes a string to a ` + typeof sToN)
+}
+  stringToNum ('5')
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -30,21 +33,64 @@ const displayDate = () => {
   // * NaN
   // * String
   
+ const getInputType = (input) => {
+  const printOut = typeof input
+  console.log (`The date type is ${printOut}`)
+ }
 
-  
+  getInputType ('10')
+  getInputType (2)
+  getInputType (NaN)
+  getInputType (true)
+  getInputType ()
+  getInputType (null)
+
+
 // Write a JavaScript program that adds 2 numbers together.
-
+const adds2Numbers = (num1, num2) => {
+  return (num1 + num2) 
+}
+console.log(adds2Numbers(8, 6))
 
 
 // Write a JavaScript program that runs only when 2 things are true.
 
+const input1 = "JAndrusak";
+const input2 = "Basketb@lli$mySport";
 
+const myFunc = (user, pass) => {
+if (user && pass) {
+  return true
+ } 
+ }
+console.log(myFunc (input1, input2))  
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+const input3 = "JAndrusak";
+const input4 = "Basketb@lli$mySport";
+
+const my2ndFunc = (user, pass) => {
+  if (user || pass) {
+    return true
+   } 
+   }
+   console.log(my2ndFunc (input4))  
 
 
-// Write a JavaScript program that runs when both things are not true.  
+// Write a JavaScript program that runs when both things are not true.
+const input5 = "JAndrusak";
+const input6 = "Basketb@lli$mySport";
+
+const my3rdFunc = (user, pass) => {
+  if (!user && !pass) {
+    return true
+  } 
+}
+console.log(my3rdFunc (!input5 && !input6))
+
+
+
 
 // ***************************
 //         PART TWO
